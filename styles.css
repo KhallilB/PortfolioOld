@@ -25,7 +25,7 @@ footer {
     background-color: #131622;
     color: white;
     text-align: center;
-    background: linear-gradient(to bottom, rgb(228, 163, 65), #FFF 100%);
+    background: linear-gradient(to bottom, rgb(228, 163, 65), rgb(216, 186, 147) 100%);
     padding: 60px 0;
 
     display: flex;
