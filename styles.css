@@ -8,3 +8,64 @@
     font-family: 'Raleway', sans-serif;
 
  */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Literata', serif;
+    font-size: 20px;
+    color: #555
+}
+
+footer {
+    background-color: #131622;
+    color: white;
+    text-align: center;
+    background: linear-gradient(to bottom, rgb(228, 163, 65), #FFF 100%);
+    padding: 60px 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer p {
+    text-transform: uppercase;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 10px;
+}
+
+footer ul {
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+footer ul li {
+    margin: 0 8px;
+}
+
+footer ul li a {
+    font-size: 36px;
+    cursor: pointer;
+}
+
+footer ul li a:link {
+    color: #FFF
+}
+
+footer ul li a:visited {
+    color: #FFF
+}
+
+@media(max-width: 800px) {
+    footer {
+        padding: 80px 15px;
+    }
+}
