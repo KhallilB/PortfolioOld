@@ -22,6 +22,11 @@ html {
 
 }
 
+/* All Headers */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Literata', serif;
+}
+
 /* ************** */
 /* LANDING */
 /* ************** */
@@ -29,14 +34,29 @@ html {
     background: #555;
     color: #FFF;
     text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.landing h1, .landing h3 {
+    font-family: 'Literata', serif;
+    text-shadow: 4px 4px #000;
+    margin-bottom: 40px;
 }
 
 .landing h1 {
-    font-family: 'Literata', serif;
+    font-size: 60px;
+    margin-bottom: 10px;
 }
 
-.landing h3 {
-    font-family: 'Raleway', sans-serif;    
+@media(max-width: 800px) {
+    .landing h1 {
+        font-size: 60px;
+        margin-bottom: 10px
+    }
 }
 
 /* ************** */
