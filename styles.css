@@ -15,6 +15,10 @@
     box-sizing: border-box;
 }
 
+body {
+    background: linear-gradient(to bottom, #3A1C71, #D76D77, #FFAF7B 100%) no-repeat;
+}
+
 html {
     font-family: 'DM Serif Display', serif;
     font-size: 20px;
@@ -31,7 +35,7 @@ h1, h2, h3, h4, h5, h6 {
 /* LANDING */
 /* ************** */
 .landing {
-    background: #555;
+    /* background: #555; */
     color: #FFF;
     text-align: center;
 
@@ -43,7 +47,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .landing h1, .landing h3 {
     font-family: 'Literata', serif;
-    text-shadow: 4px 4px #000;
+    text-shadow: 2px 2px rgb(105, 104, 104);
     margin-bottom: 40px;
 }
 
@@ -52,10 +56,17 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 10px;
 }
 
+
 @media(max-width: 800px) {
     .landing h1 {
-        font-size: 60px;
-        margin-bottom: 10px
+        font-size:48px;
+        padding: 10px;
+    }
+    
+    .landing h3 {
+        font-size: 28px;
+        margin-bottom: 20px;
+        padding: 3px;
     }
 }
 
@@ -64,10 +75,8 @@ h1, h2, h3, h4, h5, h6 {
 /* ************** */
 
 footer {
-    background-color: #131622;
     color: white;
     text-align: center;
-    background: linear-gradient(to bottom, rgb(228, 163, 65), rgb(216, 186, 147) 100%);
     padding: 60px 0;
 
     display: flex;
@@ -100,6 +109,11 @@ footer ul li a {
 
 footer ul li a:link {
     color: #FFF
+}
+
+.fa-twitter:hover, .fa-dribbble:hover, .fa-instagram:hover, .fa-medium-m:hover {
+    color: #3A1C71;
+    transition: all 0.2s;
 }
 
 footer ul li a:visited {
