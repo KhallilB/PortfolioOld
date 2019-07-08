@@ -35,7 +35,6 @@ h1, h2, h3, h4, h5, h6 {
 /* LANDING */
 /* ************** */
 .landing {
-    /* background: #555; */
     color: #FFF;
     text-align: center;
 
@@ -43,7 +42,14 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    background-image: url('assets/images/Jamaica-Home.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    min-height: 100vh;
 }
+
 
 .landing h1, .landing h3 {
     font-family: 'Literata', serif;
@@ -58,6 +64,10 @@ h1, h2, h3, h4, h5, h6 {
 
 
 @media(max-width: 800px) {
+    .landing {
+        min-height: 600px;
+    }
+
     .landing h1 {
         font-size:48px;
         padding: 10px;
