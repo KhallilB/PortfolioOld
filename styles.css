@@ -60,6 +60,22 @@ h1, h2, h3, h4, h5, h6 {
 .landing h1 {
     font-size: 60px;
     margin-bottom: 10px;
+    cursor: default;
+}
+
+.landing #inspired:hover {
+    color: #3A1C71;
+    transition: all 0.8s ease;
+}
+
+.landing #creative:hover {
+    color: #D76D77;
+    transition: all 0.8s ease;
+}
+
+.landing #visual:hover {
+    color: #FFAF7B;
+    transition: all 0.8s ease;
 }
 
 
