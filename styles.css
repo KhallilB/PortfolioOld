@@ -224,7 +224,6 @@ hr {
 }
 
 .project-gallery .grid a:hover {
-    color: rgb(109, 80, 163);
 }
 
 .project-gallery .grid .project-buttons {
@@ -246,6 +245,7 @@ hr {
 .project-gallery .grid .project-buttons:hover {
     background-color: #FFF;
     border: 2px solid rgb(109, 80, 163);
+    color: rgb(109, 80, 163);
     transition: all 0.2s;
 }
 
@@ -259,6 +259,88 @@ hr {
         flex-basis: 60%;
     }
 }
+
+/* ************** */
+/* CONTACT FORM */
+/* ************** */
+
+.contact-info {
+    margin-top: 450px;
+    margin-bottom: -200px;
+    width: 85%;
+    background: #FFF;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px 40px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 0 20px rgb(139, 139, 141);
+}
+
+.contact-info h3 {
+    margin-top: 0;
+    font-weight: 600;
+}
+
+.textbox {
+    border: 4px solid rgb(109, 80, 163);
+    margin: 8px 0;
+    padding: 12px 18px;
+    border-radius: 8px;
+}
+
+.textbox label {
+    display: block;
+    text-align: left;
+    color: #333333;
+}
+
+.textbox:hover {
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+    transition: all 0.4s;
+}
+
+.textbox input, .textbox textarea {
+    width: 100%;
+    border: none;
+    background: none;
+    outline: none;
+    font-size: 18px;
+    margin-top: 5px;
+    resize: none;
+}
+
+.form-button {
+    display: block;
+    padding: 3px 8px;
+    margin: 6px 1px 1px 0;
+    border: 2px solid #FFF;
+    background-color: rgb(109, 80, 163);
+    border-radius: 24px;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-weight: 500;
+    font-family: 'DM Serif Display', serif;
+    color: #FFFFFF;
+    transition: all 0.2s;
+    text-align: center; 
+}
+
+.form-button:hover {
+    background-color: #FFF;
+    border: 2px solid rgb(109, 80, 163);
+    color: rgb(109, 80, 163);
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+/* TODO: ADD LABEL HOVER */
+
 
 /* ************** */
 /* FOOTER */
