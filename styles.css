@@ -107,11 +107,13 @@ h3.title {
     color: #FFF;
     text-transform: capitalize;
     font-size: 42px;
+    margin-bottom: 35px;
+    text-align: center;
 }
 
 .about {
     padding: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
 }
 
 .about #two-columns {
@@ -152,6 +154,52 @@ hr {
         line-height: 1.5;
         text-align: left;
         
+    }
+}
+
+/* ************** */
+/* PROJECTS */
+/* ************** */
+
+.project-gallery .text {
+    max-width: 800px;
+    text-align: center;
+    margin: 0 auto 35px;
+    padding: 0 20px;;
+    line-height: 2;
+}
+
+.project-gallery .grid li {
+    padding: 20px;
+    height: 350px;
+    list-style-type: none;
+}
+
+.project-gallery ul.grid {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project-gallery .grid li.small {
+    flex-basis: 20%;
+    text-align: center;
+    justify-content: center;
+}
+
+.project-gallery .grid li.small button{
+    /* TODO: Add project button styling */
+}
+
+.project-gallery .grid li.large {
+    flex-basis: 40%;
+}
+
+@media(max-width: 1000px) {
+    .project-gallery .grid li.small,
+    .project-gallery .grid li.large {
+        flex-basis: 60%;
     }
 }
 
