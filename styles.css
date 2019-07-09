@@ -299,6 +299,7 @@ hr {
 }
 
 .textbox:hover {
+    box-shadow: 4px 4px #adadad;
     -webkit-transform: scale(1.05);
     -ms-transform: scale(1.05);
     transform: scale(1.05);
@@ -385,7 +386,7 @@ footer ul li a:link {
 
 .fa-twitter:hover, .fa-dribbble:hover, .fa-instagram:hover, .fa-medium-m:hover {
     color: rgb(72, 45, 122);
-    transition: all 0.2s;
+    transition: all 0.6s;
 }
 
 footer ul li a:visited {
