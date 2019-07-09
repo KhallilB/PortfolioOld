@@ -71,17 +71,20 @@ p {
 }
 
 .landing #inspired:hover {
-    color: rgb(72, 45, 122);
+    color: rgb(109, 80, 163);
+    text-shadow: 2px 2px #FFF;
     transition: all 0.8s ease-in-out;
 }
 
 .landing #creative:hover {
     color: #D76D77;
+    text-shadow: 2px 2px #FFF;
     transition: all 0.8s ease-in-out;
 }
 
 .landing #visual:hover {
     color: #FFAF7B;
+    text-shadow: 2px 2px #FFF;
     transition: all 0.8s ease-in-out;
 }
 
@@ -153,6 +156,7 @@ hr {
     .about-portrait img {
         height: 350px;
     }
+
 
     .about #two-columns {
         flex-direction: column;
