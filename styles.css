@@ -34,6 +34,7 @@ h1, h2, h3, h4, h5, h6 {
 /* ************** */
 /* LANDING */
 /* ************** */
+
 .landing {
     color: #FFF;
     text-align: center;
@@ -47,7 +48,7 @@ h1, h2, h3, h4, h5, h6 {
     background-repeat: no-repeat;
     background-size: cover;
 
-    box-shadow: 1px 1px #000;
+    box-shadow: 1px 1px #FFF;
     
     min-height: 100vh;
 }
@@ -96,6 +97,28 @@ h1, h2, h3, h4, h5, h6 {
         margin-bottom: 20px;
         padding: 3px;
     }
+}
+
+/* ************** */
+/* ABOUT */
+/* ************** */
+
+h3.title {
+    color: #FFF;
+    text-transform: capitalize;
+    font-size: 36px;
+}
+
+.about {
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.about #two-columns {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 /* ************** */
