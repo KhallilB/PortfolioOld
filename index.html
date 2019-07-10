@@ -23,6 +23,19 @@
     <title>Khallil Bailey</title>
   </head>
   <body id="top">
+    <header>
+      <!-- OLD -->
+      <!-- <h2>
+        <a href="#top"><img src="assets//images/K-Icon.png"/></a>
+      </h2>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav> -->
+    </header>
     <!-- Landing View -->
     <div class="landing">
       <div class="colored-heading">
@@ -36,7 +49,7 @@
     <!-- ***************************** -->
 
     <!-- About  -->
-    <div class="about">
+    <div id="about" class="about">
       <h3 class="title">About Me</h3>
       <div id="two-columns">
         <div class="about-portrait">
@@ -187,5 +200,34 @@
       <p>"Everything you can imagine is real." --Pablo Picasso</p>
     </footer>
     <!-- ***************************** -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        // Add smooth scrolling to all links
+        $('a').on('click', function(event) {
+          // Make sure this.hash has a value before overriding default behavior
+          if (this.hash !== '') {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate(
+              {
+                scrollTop: $(hash).offset().top
+              },
+              800,
+              function() {
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              }
+            );
+          } // End if
+        });
+      });
+    </script>
   </body>
 </html>
