@@ -44,89 +44,109 @@ a {
 /* NAVBAR */
 /* ************** */
 
-/* OLD */
-/* header {
-    background-color: rgba(0, 0, 0, 0.5);
-    position: fixed;
-    z-index: 10;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 15px;
-    color: #FFF;
+.logo img {
+    height: 120px;
+    width: 120px;
+}
+
+nav {
+    background: rgba(255, 255, 255, 0);
+    padding: 5px 20px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(125, 123, 128);
+    transition: all 0.2s ease;
+}
+
+.menu li {
+    font-size: 28px;
+    padding: 15px 5px;
+    white-space: nowrap;
+}
+    
+    /* Mobile Menu */
+.menu {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
 }
 
-header h2 {
-    margin-right: 900px;
+.toggle {
+    order: 1;
 }
 
-header a {
-    text-decoration: none;
-    color: white;
-    opacity: 0.6;
-    cursor: pointer;
+.item {
+    width: 100%;
+    text-align: center;
+    margin-left: 5vw;
+    order: 3;
+    display: none;
 }
 
-header a:hover {
-    opacity: 1;
+.item.active {
+    display: block;
 }
 
-header nav ul {
-    text-decoration: none;
-    list-style-type: none;
-    font-size: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-}
-
-header nav li {
-    margin: 0 6px;
-}
-
-header nav li:first-child {
-    margin-left: 0;
-}
-
-header nav li:last-child {
-    margin-right: 0;
-}
-
-
-header img {
-    float: left;
-    height: 80px;
-    width: 80px;
-}
-
-@media(max-width: 1000px) {
-    header {
-        text-align: center;
-        flex-direction: column;
-        padding: 20px 170px;
+/* Tablet menu */
+@media all and (min-width: 600px) {
+    .menu {
+        justify-content: center;
     }
 
-    header img {
-        width: 180%;
-        height: 150%;
+    .logo {
+        flex: 1;
     }
 
-    header nav {
-        justify-content: space-around;
+    .toggle {
+        flex: 1;
+        text-align: right;
     }
 
-    header h2 {
-        margin-bottom: 15px;
-        margin-right: 0;
+    .toggle {
+        order: 2;
     }
-} */
+}
+
+/* Desktop menu */
+@media all and (min-width: 900px) {
+    .item {
+        display: block;
+        width: auto;
+    }
+
+    .toggle {
+        display: none;
+    }
+
+    .logo {
+        order: 0;
+    }
+
+    .item {
+        order: 1;
+    }
+
+    .menu li {
+        padding: 15px 10px;
+    }
+}
 
 /* ************** */
 /* LANDING */
 /* ************** */
+
+/* TODO: ADD LANDING SCRREN ANIMATIONS */
 
 /* @keyframes purpleWhite {  
     0% { color: #FFF; }
@@ -186,29 +206,25 @@ header img {
     cursor: default;
 }
 
-/* .landing #inspired {
-    -webkit-animation: purpleWhite;
-    -webkit-animation-iteration-count: infinite;  
-    -webkit-animation-duration: 4s; 
-    transition: all 0.2s ease;
-} */
-
 .landing #inspired:hover {
     color: rgb(109, 80, 163);
     text-shadow: 2px 2px #FFF;
     transition: all 0.8s ease-in-out;
+    cursor: default;
 }
 
 .landing #creative:hover {
     color: #D76D77;
     text-shadow: 2px 2px #FFF;
     transition: all 0.8s ease-in-out;
+    cursor: default;
 }
 
 .landing #visual:hover {
     color: #FFAF7B;
     text-shadow: 2px 2px #FFF;
     transition: all 0.8s ease-in-out;
+    cursor: default;
 }
 
 

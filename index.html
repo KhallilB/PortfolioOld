@@ -16,7 +16,10 @@
       rel="stylesheet"
     />
     <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/af65104ec5.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+    />
     <!-- Stylesheet -->
     <link rel="stylesheet" href="styles.css" />
     <!-- Title -->
@@ -24,26 +27,30 @@
   </head>
   <body id="top">
     <header>
-      <!-- OLD -->
-      <!-- <h2>
-        <a href="#top"><img src="assets//images/K-Icon.png"/></a>
-      </h2>
       <nav>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+        <div class="logo"></div>
+        <ul class="menu">
+          <li class="logo">
+            <a href="#"> <img src="assets/images/K-Icon.png" /> </a>
+          </li>
+          <li class="item"><a href="#about">About</a></li>
+          <li class="item"><a href="#projects">Projects</a></li>
+          <li class="item"><a href="#contact">Contact</a></li>
+          <li class="toggle">
+            <a href="#">Toggle</a>
+          </li>
         </ul>
-      </nav> -->
+      </nav>
     </header>
     <!-- Landing View -->
     <div class="landing">
       <div class="colored-heading">
-        <h1>
+        <h1>Khallil Bailey</h1>
+        <h3>
           <span id="inspired">Inspired.</span
           ><span id="creative">Creative.</span><span id="visual">Visual.</span>
           <!-- TODO: <h3>QUOTE?</h3> -->
-        </h1>
+        </h3>
       </div>
     </div>
     <!-- ***************************** -->
@@ -136,7 +143,7 @@
 
     <!-- Contact -->
     <div id="contact" class="contact-info">
-      <h3>Get In Touch</h3>
+      <h3>If you like my work, please get in touch with me!</h3>
       <p>If you liked my projects. Let me know!</p>
       <div class="textbox">
         <label>Full Name</label>
@@ -201,6 +208,42 @@
     </footer>
     <!-- ***************************** -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      $(function() {
+        $('.toggle').on('click', function() {
+          if ($('.item').hasClass('active')) {
+            $('.item').removeClass('active');
+            $(this)
+              .find('a')
+              .html("<i class='fas fa-bars'></i>");
+          } else {
+            $('.item').addClass('active');
+            $(this)
+              .find('a')
+              .html("<i class='fas fa-times'></i>");
+          }
+        });
+      });
+    </script>
+    <script>
+      const navToggle = () => {
+        const menu = document.querySelector('.menu');
+        const nav = document.querySelector('.nav-links');
+        const navLinks = document.querySelector('.nav-links li');
+
+        menu.addEventListener('click', () => {
+          nav.classList.toggle('nav-active');
+          console.log('menu');
+
+          navLinks.forEach((link, index) => {
+            link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 +
+              0.3}s`;
+          });
+        });
+
+        navToggle();
+      };
+    </script>
     <script>
       $(document).ready(function() {
         // Add smooth scrolling to all links
