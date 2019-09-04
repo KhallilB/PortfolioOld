@@ -146,32 +146,42 @@
       <h3>If you like my work, please get in touch with me!</h3>
       <p>If you liked my projects. Let me know!</p>
       <div class="textbox">
-        <label>Full Name</label>
-        <input
-          type="text"
-          name="full-name"
-          value=""
-          placeholder="Enter Full Name"
-        />
-      </div>
-      <div class="textbox">
-        <label>Email</label>
-        <input type="text" name="email" value="" placeholder="Enter Email" />
-      </div>
-      <div class="textbox">
-        <label>Phone Number</label>
-        <input
-          type="text"
-          name="phone-number"
-          value=""
-          placeholder="Enter Phone Number"
-        />
-      </div>
-      <div class="textbox">
-        <label>Message</label>
-        <textarea></textarea>
-      </div>
-      <a class="form-button">Send</a>
+        <form>
+            <label>Full Name</label>
+            <input
+              type="text"
+              name="full-name"
+              id="full-name"
+              value=""
+              placeholder="Enter Full Name"
+            />
+          </div>
+          <div class="textbox">
+            <label>Email</label>
+            <input
+              type="text"
+              name="email"
+              id="email"
+              value=""
+              placeholder="Enter Email"
+            />
+          </div>
+          <div class="textbox">
+            <label>Phone Number</label>
+            <input
+              type="text"
+              name="phone-number"
+              id="phone-number"
+              value=""
+              placeholder="Enter Phone Number"
+            />
+          </div>
+          <div class="textbox">
+            <label>Message</label>
+            <textarea id="message" value=""></textarea>
+          </div>
+          <button class="form-button" type="submit">Send</button>
+        </form>
     </div>
     <!-- ***************************** -->
 
@@ -208,6 +218,28 @@
     </footer>
     <!-- ***************************** -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      $('form').on('submit', (e) => {
+        e.preventDefault();
+
+        const fullName = $('#full-name').val().trim();
+        const email = $('#email').val().trim();
+        const phoneNumber = $('#phone-number').val().trim();
+        const message = $('#message').val().trim();
+
+        const data = {
+          fullName,
+          email,
+          phoneNumber,
+          message
+        };
+
+        console.log(data);
+        $.post('http://localhost:2121/email/sendemail', data, function () {
+          console.log('Sent data');
+        })
+      })
+    </script>
     <script>
       $(function() {
         $('.toggle').on('click', function() {

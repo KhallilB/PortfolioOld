@@ -38,7 +38,15 @@ a {
     text-decoration: none;
 }
 
-
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
 
 /* ************** */
 /* NAVBAR */
@@ -457,6 +465,7 @@ hr {
 }
 
 .form-button {
+    width: 80vw;
     display: block;
     padding: 3px 8px;
     margin: 6px 1px 1px 0;
@@ -472,12 +481,26 @@ hr {
     text-align: center; 
 }
 
+
+
 .form-button:hover {
     background-color: #FFF;
     border: 2px solid rgb(109, 80, 163);
     color: rgb(109, 80, 163);
     transition: all 0.2s;
     cursor: pointer;
+}
+
+@media(max-width: 800px) {
+    .form-button {
+        width: 75vw;
+    }
+}
+
+@media(max-width: 600px) {
+    .form-button {
+        width: 66vw;
+    }
 }
 
 /* ************** */
