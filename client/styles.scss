@@ -133,7 +133,7 @@ a:hover {
 }
 
 /* Desktop menu */
-@media all and (min-width: 900px) {
+@media (min-width: 900px) {
     .item {
         display: block;
         width: auto;
@@ -313,7 +313,6 @@ hr {
     text-align: center;
     margin: 0 auto 35px;
     padding: 0 20px;
-    ;
     line-height: 2;
 }
 
@@ -326,6 +325,9 @@ hr {
 .project-gallery .grid img {
     box-sizing: border-box;
     box-shadow: 2px 2px #FFF;
+
+    height: 250px;
+    width: 250px;
 
 }
 
